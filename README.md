@@ -61,4 +61,4 @@ HTML
 
 CSS
 
-Vanilla JavaScript (ES6)
+JavaScript
