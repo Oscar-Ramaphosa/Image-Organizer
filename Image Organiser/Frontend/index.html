@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Organizer</h1>
+
+    <!-- Upload Section -->
+    <section class="card">
+        <h2>Upload Image</h2>
+        <input type="file" id="imageInput" />
+        <button onclick="uploadImage()">Upload</button>
+        <p id="status"></p>
+    </section>
+
+    <!--Filter Section-->
+    <div class="filters">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by file name..."
+        oninput="applyFilters()" />
+
+    <select id="typeFilter" onchange="applyFilters()">
+        <option value="">All Types</option>
+        <option value=".jpg">JPG</option>
+        <option value=".png">PNG</option>
+        <option value=".jpeg">JPEG</option>
+    </select>
+
+    <select id="orientationFilter" onchange="applyFilters()">
+        <option value="">All Orientations</option>
+        <option value="Landscape">Landscape</option>
+        <option value="Portrait">Portrait</option>
+    </select>
+</div>
+
+    <!-- Image List Section -->
+    <section class="card">
+        <h2>Uploaded Images</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>File Name</th>
+                    <th>Type</th>
+                    <th>Orientation</th>
+                    <th>Size (KB)</th>
+                    <th>Uploaded At</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="imageTableBody"></tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
