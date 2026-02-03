@@ -62,3 +62,21 @@ HTML
 CSS
 
 JavaScript
+
+## How It Works
+
+The user uploads an image via the frontend
+
+The API:
+
+Saves the image to disk
+
+Extracts image metadata
+
+Stores metadata in SQL Server
+
+The frontend fetches image data from the API
+
+Images are displayed with thumbnails
+
+Client-side filtering allows instant searching without additional API calls
